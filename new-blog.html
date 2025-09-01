@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derp Dogs Don't Understand Basic Concepts</title>
+    <link rel="icon" type="image/png" href="thumbnail.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .main-content {
+            max-width: 800px;
+            float: left;
+        }
+        
+        .banner {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
+        
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .content {
+            padding: 40px;
+            text-align: left;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: left;
+        }
+        
+        .text-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .comments-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+        
+        .comment {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-left: 4px solid #333;
+            border-radius: 5px;
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .comment-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .comment-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-left: 10px;
+        }
+        
+        .comment-text {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .comment-form {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-left: 4px solid #333;
+            border-radius: 5px;
+        }
+        
+        .comment-form h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .submit-btn:hover {
+            background: #555;
+        }
+        
+        .default-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #333;
+            color: white;
+        }
+        
+        .footer img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        
+        .sidebar-placeholder {
+            position: sticky;
+            top: 20px;
+            float: right;
+            width: 250px;
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            color: #666;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        
+        .sidebar-images {
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-images img {
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+        
+        .sidebar-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .widget-content {
+            text-align: right;
+        }
+        
+        .widget-content ul {
+            text-align: right;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .widget-content li {
+            margin-bottom: 8px;
+        }
+        
+        .widget-content a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .widget-content a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner -->
+        <div class="banner">
+            <img src="Untitled design1351351635136.png" alt="Blog Banner">
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar-placeholder">
+            <!-- Sidebar Images -->
+            <div class="sidebar-images">
+                <img alt="." height="300" id="Image15_img" src="Untitled designzxgadzcxz.png" width="200">
+                <img alt="" height="300" id="Image21_img" src="Untitled designczbzcbzb.png" width="200">
+                <img alt="" height="50" id="Image16_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOnP1NEdkUTXZFXnNiEFQEerlFZPmjNBDmqlOT78HSVbYW5I2KpwYWhTKyj8k3NRJVc3bxwSUrGZXLfOoxIpF2-YLqZHRJgTUPJnm1PAUmnHy_JPCXsYQ_m-Oe7AgPpF-HJTYOx4Ko2Sw/s150/BESTOFBUTTON.png" width="150">
+                <img alt="" height="113" id="Image28_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxUchAOc7YV7wZEm3egtc9kfyumgGsaxLkVTIdu90WMEFo3QEkh7NTS-7GVeqUAl5URWzb0cY_OaT4lEFUet2-KiK6GX5eKwB6KHPC9RCDA19nCzwZbAqXZlIfsfRSrtt2NbIudbDIpYA/s200/cakeBUTTON.png" width="150">
+                <img alt="" height="113" id="Image24_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNMb4SimHez9n3msHbcAiouuBlPl1Ihj4yMNU8qr7xmbdW6LH966n-C93HqPVxRZWhQh5to-7raXaa9TJ3Tix9KsOfaqI_q6zTdqb-FdHL1tWL_gTBeZx1bFqVCucQQIviv1-bg7kJ16E/s200/anesthesia30BUTTON.png" width="150">
+                <img alt="" height="113" id="Image1_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoHBvQnhRceciHN_WpSqNNYZcyRhN2DO8Z37yn6HZf2k2B4ZCHjDMKFYZWc6qCm6wgZCVI_EgBaw5jLm9T0HQ_sFXAU1KrkKvK4Jub6fl_JB3h393PSzknuKLxnjojEuxF7DNHooe43S0/s150/responsibility6button.png" width="150">
+                <img alt="" height="113" id="Image6_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihI_4MgcyK1CH9WjCoghT64eKaNkTavAkgRlUZIqo6vJK1paHAKm0jMAU3JpFAvvUojXknDdxzVhf0qTTOoFldpIwH86zos_HlYdq_fnJHuk03-loXcKfVaDbDj0k-LJcyhCDeMReP2ZE/s150/Kellie28button.png" width="150">
+                <img alt="" height="113" id="Image8_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgc8pO5p5ketwwgpfnhUOgoYoS7cmShTURghXbmu4iHInrdZJ8LYl4wyTUxWEmlsZ0q65It3ADo7bLAaYtvJ6dWaMpATSsufFXmcUm6xO5JHWk6Qu9Ex3j8fYmQvTZlqNWKbCHuls_8PCU/s200/dogs4altaltBUTTON.png" width="150">
+                <img alt="" height="113" id="Image5_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdOwOtotTa4JzoQxtI5jFR3dE30KB3IsgeU8iWU_hLsfoOYSHjUaREetsIKRioLpQx-z-5RoJGmlTVbZ1JmwDI6zJqmLqmWda98n6zS12-R2GYllmzUWuC_nPwJy463idwxy6s9poRUMI/s150/bricktagbutton.png" width="150">
+                <img alt="" height="148" id="Image10_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhq9vIXW9DqGEJ-DHiPS5M_qlKraZN_9hFFnMyHUHPspnDWL0rDNk1-C_pUvcXocJKT2JRtSY0wJwybq4AkHsod4VL_hvMd6KCFwX5laXJ4Tc4mBelFuVYSyEdPPvzJyONctgfbkOV35xY/s150/awkwardfiresmallbutton.png" width="150">
+                <img alt="" height="113" id="Image26_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNzeQp4pMTKWxd1ggaefP-ZaKb7ERskTShjqv1AaxYlFgJRCtSoLTMd5SHgwZ0qDC2osuePh8Kb4SKxliLZfYAIWP1XkHkuoTntyaPZUD2n46iMAUXoo_E9Hf3Ysg9Zt_W4XjBjXXBgTM/s150/rage15button.png" width="150">
+                <img alt="" height="113" id="Image19_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzU06-ga0mmSh60Up7LWxZSDsHkTkm46ieZuDmyNpmHW0urDHi0Y8sPHNoq-f0oqJAGI5SSdHGsu52ZaVMmAa86bO93w4aMu51Nx-UkYfL09oXGPkCmUq0x9AYGOeS5vkjRGwTJ7dCEl4/s150/pleasestoptakingthatfrommebutton.png" width="150">
+                <img alt="" height="113" id="Image23_img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX8ViotKVy9KQHj1YdCdWuGOJNVG8feztQM9kA7j75OvQ7jfalF0YLcYUN4wQ9f3E0FVzuGrP4rRbGWZNhNQCPMCW-Jj2YmsOvASWDQJjQZQSyk66HoR-QnN5NLcumx6w3vzMaJNw14ss/s150/spider12button.png" width="150">
+            </div>
+            
+            <div class="widget LinkList" data-version="1" id="LinkList1">
+                <h2>Internet Things That Make Me Laugh or Think. Or both.</h2>
+                <div class="widget-content">
+                    <ul>
+                        <li><a href="http://pbfcomics.com/">PBF comics</a></li>
+                        <li><a href="http://harkavagrant.com/">Hark, A Vagrant</a></li>
+                        <li><a href="http://www.27bslash6.com/strata.html">27bslash6 (David Thorne's Blog)</a></li>
+                        <li><a href="http://theoatmeal.com/">The Oatmeal</a></li>
+                        <li><a href="http://nedroid.com/">Nedroid</a></li>
+                        <li><a href="http://whiteboardunicorns.com/">Whiteboard Unicorns</a></li>
+                        <li><a href="http://cakewrecks.blogspot.com/">Cake Wrecks</a></li>
+                        <li><a href="http://thebloggess.com/">The Bloggess</a></li>
+                        <li><a href="http://buttersafe.com/">Buttersafe</a></li>
+                        <li><a href="http://chickenmaker.blogspot.com/">Chicken Maker</a></li>
+                        <li><a href="http://youmakemetouchyourhandsforstupidreasons.ytmnd.com/">Dramatic Reading of A Real Breakup Letter</a></li>
+                        <li><a href="http://strangerthaneviction.tumblr.com/">Gary: Landlord of the Flies</a></li>
+                        <li><a href="http://steammeupkid.blogspot.com/">Steam Me Up Kid</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="content">
+            <h1 class="title">Derp Dogs Don't Understand Basic Concepts</h1>
+            
+            <div class="text-content">
+                <p>Shoving every single thing you own into a moving truck and hauling it across multiple states is about as effective and pleasant as attempting to escape molten rock while wearing flippers.</p>
+                
+                <div class="image-container">
+                    <img src="Untitled designfhsfghqeqrq.png" alt="Moving truck illustration">
+                </div>
+                
+                <p>I can personally attest to this because Duncan and I relocated from Montana to Oregon last month. While the whole ordeal was absolutely nightmarish for us humans, it paled in comparison to the complete psychological devastation our two canine companions experienced.</p>
+                
+                <p>Our first dog is - to be diplomatic - not exactly a genius. Our other dog is an anxiety-ridden German shepherd mix with crippling self-doubt who has appointed herself as "Half Dog" for our Derp Dog. Both dogs are spectacularly unequipped to handle any form of stress whatsoever.</p>
+                
+                <p>The moment we began packing, Half Dog instantly sensed that chaos was afoot. I knew she knew because she transforms into an absolute drama queen whenever confronted with the slightest hint of unpredictability. She commenced stalking me relentlessly, periodically collapsing onto the floor in theatrical despair - presumably hoping this would guilt me into abandoning my packing efforts and addressing her obvious emotional crisis.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgShNkATtwi5apIHe4tjHmi1D9ZWejbs75dzCiIDmKmyW5WkNaRquLlXn57bQl1pSh-4F-QPJImAVA1_3RUHEMC6RZVq86xLbUK0Kb6tOQMIo0mWrEzOyby5Vzy4RffudvI2is6ctc8GZI/s400/dogs15.png" alt="Half Dog being dramatic">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5Rt9Go5xiW3axp7PiYFTmO5-JHbECD6td3ybyYadStxu660E5BmI5DzbVJewMpUAZYJZvuAEP9xS8RDpaNdr72xSxX6iw4wVQsxxIfCIF8envEnHpTszWw8014PPUbVWXtlKqvr-F0AQ/s400/dogs13altaltaltalt.png" alt="Dogs being dramatic">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMwa0SXYGHHiMm4jcs1UBY_f5HNvsDFt2Py_I8u_g-b4TGkuv-Lq6_7GYqCmIdvYkL-HxUlqOx1e-DQxRkPEtj5HrjeTHKP-l2-ijJCgzkPrWeghLbxlqndUe391T1qpx0ra05ZTUsMdQ/s400/dogs16alt.png" alt="More dog drama">
+                </div>
+                
+                <p>When her heart-wrenching emotional manipulation failed to stop me from shoving items into containers, Half Dog grew progressively more panicked. Throughout the following days, she gradually spiraled into complete mental breakdown. Derp Dog, meanwhile, remained blissfully oblivious.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgfKPCHbl7r6AzGauv1-xp2Lf-LCEPAnc3XdA0GHyLCl_tswWdviDnVuBNgn2Z_u_-m9W-NtFu9jCii_6-mQ3nZUaZZa78WpsqV8FtyH1lPUj0hoybAVkZh6LO8IIGf1gua-gQxRu03zs/s400/dogs21altalt.png" alt="Half Dog panicking">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip7iEV9I2T2vQX4ddmKhyArm2PJCWcCPERtB7n8CFoD39C6UdfyJGE_LsN6apkcw-Hr66gf0Wdb6cTZ3qXy06fMeIIlTvrYEAz-gt8S6Eg1V9QuViN8KHSjIHwREGBmADZff7PU3hnhmQ/s400/dogs12.png" alt="Derp Dog oblivious">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5rn7s4wrPfhBDzHjMGNsBJarqS5EMQP3vhojPdALQUox8A2ThIuYL0LfDwgLjfwVy-5zdESmRvXd57y_ustloNhtc673gO9hfHZVQsQrzjzUdZGZ7M6-IAWpFWeXoxWMaI2ayGi0qd7k/s400/dogs22.png" alt="More dog chaos">
+                </div>
+                
+                <p>Tragically for Half Dog, it took us almost an entire week to finish packing everything. By the time we prepared to embark on the first leg of our two-day trek to Oregon, she appeared completely convinced that her demise was imminent. She spent the entire car journey slobbering and trembling like a leaf in a hurricane.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguDXqRYj0RUXXD6s1cR1-ViU-eishuB39YVARIgZWwsBS2vax02RSo0Ytv-AOYI3JDlSp-sRLtJ7jp190gYFaM90EX6avi-xIElyE85ysWCG9oIKvyyAbLOBiShr4SFAHKtvIkLW3VJBI/s400/dogs25altaltalt.png" alt="Half Dog trembling">
+                </div>
+                
+                <p>Derp Dog, however, appeared to be having the time of her life.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXp9qtkBz3CeXdW3GFAQdJUeVTdwdOmHENCVmbu5AbUFeHo6yL0abFrL8JgGJkzHtBMOsKID9qUNNVs8pGjMqlh7J6JPOrtIrlTq_eJYd7SfQEGWe4imVeZURTWHPJvT8a19_1rmAvpH8/s400/dogs29alt.png" alt="Derp Dog having fun">
+                </div>
+                
+                <p>Despite projectile vomiting on seven separate occasions.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8Y9XrvkswExY7RmHugnBdE1sK8Rgbu_qaotTFVAFm2Xri390LdI794uqu2rWkXP_1ewLEFh56lKPFNYeUTuaGEH6B8J_ZYOiON4P6aiam5boKxaFT0O4XbjARzfV53S0fNUDNc05GIWw/s400/dogs26altalt.png" alt="Vomiting incident">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0zu22udbSy0FitiX0w3xA6cM9HaFHctOW76PQW679JeDhpnfBrBVH4ZUcAEmmp8XknRQs8p1rHve6hCPOlWuIglpJt3zkYsJI9ZEeHRVBiToLB6htFnHaxPFT9ZPc3_rZUih3o48TP2Y/s400/dogs27.png" alt="More vomiting">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHv10DMW8pZtkT0jtj9xenGvx-R90j0-a-CMKxn5SVL2CZcL0t6sZw7eOPvuSBI8ZKC1FDe4ZubI0FzSp1D0y0HQ6MesyUug4XEHlWeWUQjIg5gTepZfDYBW4jXyQB2sOFofH6vajvdKg/s400/dogs28.png" alt="Vomiting continues">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgElHBKeMoYTtQqUNWMkM0ZNthr3dU1xuGw9I2QcO00wC6b68r8bVb682XLDWlLhR3Y5u-EQ4vwTH0WKAwn_G4apmwVnlbcFISzQxR1wignw0sAFqgoUL6HIDdRp_5Iav0tp0KVKXBmDxw/s400/dogs28altalt.png" alt="Still vomiting">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1d2Li1G5RNFtzT1R8BWPzZ0TRd_0TOF07Iy1nU4p3CY1tHu9uM4ieMACRBdTFEzuphCxFLVcJpuRXOTR-UORET1LzL6KU-Bqtq5jmcMPGmCmwLBYSpqsSkV6kzSM7X9npMH_eLApk6fE/s400/dogs30alt.png" alt="Vomiting finale">
+                </div>
+                
+                <p>She genuinely appeared to relish the vomiting experience. To Derp Dog, puking was like discovering some incredible superpower she never realized she had - the gift of generating endless sustenance. I was significantly less thrilled about this revelation because it transformed my dog into a disgusting, barf-producing perpetual motion device. Every time I detected her gagging in the backseat, I had to swerve to the side of the road immediately to stop her from refilling her stomach and restarting the entire disgusting cycle.</p>
+                
+                <p>But from Derp Dog's perspective, it was absolutely the greatest, most thrilling adventure of her entire existence.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg83kBoAwStqHR9bTPF6zUBsP_PGSGjb5yw3V_X7s_GS33P7pS5qev5omc1VgCYe7UiBpphjSMTNODRpY2xeSy78pddDn2kIdMTYlOFm5dTOhSPq2N91ZCunbQ9WCCRRYPeCGiSpxMSThs/s400/Picture+12.png" alt="Derp Dog's adventure">
+                </div>
+                
+                <p>It wasn't until we pulled over for the night in Umatilla that Derp Dog finally became conscious that there might be something worth worrying about. But around two in the morning, Derp Dog at last comprehended that things had changed and perhaps she ought to be concerned.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4KwdKsQSiAjuYJftHLvyZOtIQ0BOGaZZ-s0Wahn1iTgF2Te02nd5jNkB1m8q2FWDbmxm9FlfPr7P6QW5Q0rvEFuJs1ckPsaC71X3A6v0WnaKGRU9ji-ZoVR83V3Ljb8Z30RcsyHMaQE0/s400/dogs3.png" alt="Derp Dog concerned">
+                </div>
+                
+                <p>This particular canine is nowhere near the genius end of the intelligence spectrum when it comes to addressing problems. In reality, she possesses only one identifiable approach to problem-solving, and it's not even technically a legitimate strategy.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGYyLNFmbY7uBjFHAzm-U67fEIHzctIvDMS3yLv0bl_yyNxKkBYZlObZjnm_Eiy0R2hZ6HUJne-Y7sTUgRWxDIFqA-hrmQjgDp70KKlx7oQuAzFuo35GjhdzAB-oTDuPqh7FG9d4Q79GE/s640/dogs10.png" alt="Problem-solving strategy">
+                </div>
+                
+                <p>But emitting ear-splitting shrieks won't resolve your issue if your issue is a total incapacity to handle any form of change. Regrettably for all parties involved, Derp Dog failed to grasp this fundamental concept and proceeded to generate an endless stream of noise that was precisely intrusive enough to render sleep completely impossible.</p>
+                
+                <p>After an hour of unsuccessful efforts to console Derp Dog, her relentless, piercing emergency-alarm became a massive issue.</p>
+                
+                <p>I attempted to express my frustration to Derp Dog, but attempting to communicate with Derp Dog typically unfolds like this:</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrICZCH-NxgAzB8nNtkp5MTu8L-m9i3lgGK3ID39pweEOFMCW4doTI0WzUP4QvCBlmfFQh3fW5uSJUH13y6Ul7ABwWRv3b8Kw7BRNISzzy9G4T2VdGzPQyovQXsu1ZjMYilCwnh8CoSZg/s400/Picture+18.png" alt="Communication attempt 1">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAl1JSYJEx-s_u9i8O-dJryBdf4esuP85UUcMFDb1q24kai4GqIpJsbyTYv9VfaHAFQ_mI-MCCkHIWzHFoVoG_KsgfJ-Rkk8A9qeEHDuqav6l5Hl32tqQKAxrL88Q2PKbCTy3a9ECgkcs/s400/dogs38alt.png" alt="Communication attempt 2">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTPlHg85IBRVSfUu6RvCYlzm5O9H6UE1jqsSLbilAhhiE1qEFgsdG19_B459fd1HqbeP5jZGniqDiStTO43pYnnn_Atnt-k6N9AwkxVzgctTbTDPl1V55IZwi6U7UjSp1v-oyWqJoXJ04/s400/Picture+18next.png" alt="Communication attempt 3">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdoHwHSpob_9d8Y1bGSFBlyIIIRqeBBC-SCRqHu_w_CbXPlBGhE5Bl82qYBiR__t6yvr1Qmfm54e-h816ANw__nfEZhV4pPU8tiYRH8FsobiK08hLUzY56STr6XNFZU1_RbF6q86W6cuc/s400/dogs38altnext.png" alt="Communication attempt 4">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi72zacQtO8bPcGcw2L6xAziWB4Y0f-EnfOP1G8Z5_n7LXu2zPEY3I5IuTyi2EhN3Cw00Z2tLmtr49zlVscM8qGLXlilEzOyzNTwkL-OkVEYAdQMPVdGBZvy1M6nizWY7Rj3UkZPeteYB0/s400/Picture+18nextnext.png" alt="Communication attempt 5">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiPRGKLzVbPTk-slUmmWATZlHUOLHWEmVbRos1RP6Jgl97wVVls3G4soFcGkclSpEKn3yP1mZlFndd4UVAWUvO7i2_xWjrYgEu8CRr8LDfAeTGpErr81pJagPPJtp0LXO9ClB2z_Vpofo/s400/dogs38altnextnext.png" alt="Communication attempt 6">
+                </div>
+                
+                <p>She was prepared to maintain that noise indefinitely if she deemed it essential. We attempted everything from cuddling her to confining her in the bathroom, but absolutely nothing had even the tiniest impact.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQCj7RwnPns1xGgpamo9BWlwE6AZ9rAbvfgyEVKXFevfD-_bL2JBoRJPBVnRXR2rXIcQZ6Xqxiikt_RuelecN6TwwbvRPXnn469CiW8Fdh9VBxPe82okUgvbOD44lH3ylbofyFvd70d6E/s400/dogs5altalt.png" alt="Attempting to console">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3ELuNYDopll_JxYIMc-OOpJR4MoEqhJJUCnBvKCXlugpzXf6fwJDjYaYNT3k69g513yoRDdw04FhxIwXn5LVeF7mmCuSCjjeUmJhlJW7kWIjAG6_OQUqx6jr4MiDqOep89nFqnfCN3rI/s400/dogs39.png" alt="More consoling attempts">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTPQVdXGeSH95AAqmUi9OlCdjJUnLVEx_lJCaxYo5VApgPbsh51vUYQEsUwwm1Oup7HPXXnVr0Z4gypeFHU9CDeeqpu_oPbDw4GqKjox6ZlVCr2VfRDBFLPJdLZy14yWdCvOQJt3bK8vU/s400/dogs4alt.png" alt="Still trying">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaUwn5qxGxt98c_haGYeqCV7QXpOIwlCljB7rDpK5lWbQL53o45gZDHgaplN50M2-XGEVZexzngQmyeHB_E_gH6uehA0MVxnjiux8qfPt5nK7a2OUltfROaQV_tHqVnzVpsYEQEQaPj90/s400/dogs39next.png" alt="More attempts">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUTesdzcZzZP3e_87CViwD3qQX-LPIJ-XOeWwwiDhLDfFhvzaqDTMXcW1yGtvG7go7-tmP5pv-pFqlcGly6hB6C66aAk5bSB0bdwdd4CQosbKm3hBjXR130Gbry23XWk6uQ0BIp3fBNfA/s400/dogs4altalt.png" alt="Still no success">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmxXIVJSUUGa170qOo4K7mg8GTzpjmIrz6NNZ9njH8WnxP2RFX-lLncyRJ-0UaN4gtI0tSwt1_4wqp6s0iHdRkl_gr0IIWXoL52-veRIMe5uAuCHJrM3qgJS4a7pXYtiSrg8Gn0aGN8Mo/s400/dogs39nextnext.png" alt="Final attempt">
+                </div>
+                
+                <p>Derp Dog maintained that racket throughout the entire night and was still going full force the next morning. When we were loading the dogs into the car, the relentless, piercing sound emanating from Derp Dog finally shattered Half Dog's sanity. Half Dog howled in misery, which terrified Derp Dog. In her shock, Derp Dog emitted a shriek, which further distressed Half Dog. And thus it continued in a miserable positive-feedback cycle of entirely pointless noise.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeJdfDCSDo-wBlAAgu7Ql0tPjmmSXrl4DOHQ9fY-4SR_9DigGHDhicdFUTbsBSDil_aFd5jld0x7v68_qIsZTAQs1jmpSOGaFDy21mgAd7fdpZo2OT9JN0RNCaLSYkq6ikwPKvYQUDYwQ/s400/dogs7altnext.png" alt="Noise cycle begins">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQUmTSD6UiVlNBnb1SJE3GOzo_bRk8XaUkfrpw_6MrxSPR6z7_x6GD1U-Q9lHpYNYV0vTVrZ6uGwCMuhjhVtQpDm3qEmRT1uTgCJZLDsXbpzkt-vpIXJKqScbR6KRuj7b5vtC4TQTcQGw/s400/dogs45.png" alt="Noise cycle continues">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYZDi_0ufCSZYJkyl0ez-EOaWpqgYvnriePNDJEeUUDAr3d3lmokNU8XAs47p6inDm7-355n1j5epdhoxzw6fV7T8CuKjokVTQu-6Ew7VMIPPbt2MYd56NktsnirsfwhZppigBkRe3loo/s400/dogs45next.png" alt="Noise cycle intensifies">
+                </div>
+                
+                <p>When we finally reached our new house, the dogs had settled down significantly. Regrettably, it had snowed the previous night and there was still snow covering our front lawn, and that was sufficient to launch both dogs straight back into complete hysteria.</p>
+                
+                <p>Derp Dog had either never encountered snow before or she'd completely forgotten that she understood what it was, because when we released her from the car, she strolled around normally for approximately seven seconds, then she spotted the snow and her tiny, feeble brain completely malfunctioned.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjN0cV32K0zWmVRPm3zKbDLCklzC-NQSnERWIUZhMlIp6UpIaXMAm3zinlb-9tlGUUQLOI4XZ_7KFAVOPoDf-etAYGrj9cMsrzZAM_leeTibvR-OF_2zAM3xoF4lj1gjf9A9M9qGHhEcjE/s400/dogs11.png" alt="Derp Dog sees snow">
+                </div>
+                
+                <p>Initially, Derp Dog was thrilled about the snow. She commenced prancing around the yard like she was the headliner of a one-dog parade - her recent personal trauma completely eclipsed by a fog of excitement.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_ReHWa_hA9il2B84sLVZInmEZ-XLjvZOH7HZAGzaYROUSAmOMG8ZeIdTLeqUdwKo2Nv3691I6qgLQgo2AqVLKwKTgJBkQNcD3Vd__DclRrKppukGe0ydul26qLz7eRDflqanBPrkUm1Y/s400/dogs36altalt.png" alt="Derp Dog excited about snow">
+                </div>
+                
+                <p>The prancing evolved into leaping and the leaping transformed into running chaotically in idiotic little circles. Then she simply halted and gaped at the ground. There was an obvious change in her behavior as she comprehended that she didn't understand snow and it was everywhere and she should probably be terrified of it. She commenced making the noise again.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUnOskAGserA4Z2ANHirIrrmFuT3dPYnwEnR8_zT-KmV7rdYDHa-oIB1WJoRDZ4vmBOmMeiSL907kwerTRqjj07qd1ClCJ-t9FhzAGkDUEQuvfb_c2ONnTYO3UHkY5opXdC1_sand2WSA/s400/dogs18.png" alt="Derp Dog confused by snow">
+                </div>
+                
+                <p>Unsurprisingly, Half Dog interpreted the snow as a signal of her impending doom. But she was so drained from fretting about all of the other indicators of her doom that she simply surrendered and embraced her death. She gazed up at us, partially buried in the snow. Her eyes were brimming with agony and despair, as if she believed we had conjured the snow specifically to make her miserable.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVJQ_MPeGaAg3Ze1dZVi2WZ8CkgpkPHXXmnEpPV3Ag-aD2q4ZwD0d9xAaspHyIDWq2bTF7FZKXPdHTQCNzLEOpicZVo3-6lqUuThc3hPZ-RZfReZEPun3o4LlW5lpsIAY4bJ5wUMEOglw/s400/dogs14altalt.png" alt="Half Dog surrenders to snow">
+                </div>
+                
+                <p>We concluded that it would likely be wisest to bring the dogs indoors.</p>
+                
+                <p>As a requirement for permitting us to have dogs in our rental house, our landlady made us swear that we wouldn't allow the dogs to scratch the wood floors. We didn't expect it to be an issue because it hadn't been previously, but the moment our dogs stepped foot in the house, they transformed into flawlessly designed floor-demolishing devices. They commenced sprinting as rapidly as they could for absolutely no reason - skittering around in circles to prevent running into the walls.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjblYhaqyXzM3yZpRI-MgNuWoxD_yHGAjhlCouaZw_R7jS0q_jLLyRIn7fQ5IjUFb8wgQ2DmS4RPYkyQvqWUvMQlybonOwEJ99rwnf__5khfOvcieOYPirQB0T4t98orUDI-o08HlZJLew/s400/Picture+22.png" alt="Dogs destroying floors">
+                </div>
+                
+                <p>We eventually herded them into the bedroom and closed the door to give ourselves a little time to regroup and devise a plan. Until we could acquire some rugs or persuade the dogs that it was unnecessary to sprint around chaotically for no reason, we would need to find some method to prevent them from scratching the floors. What we ultimately did was go to the pet store and purchase two sets of sled dog booties. It was the only solution.</p>
+                
+                <p>It's simple to envision that a dog who has recently endured a dramatic disruption of its previously secure and predictable life might not respond well to suddenly having bizarre objects attached to all four of its feet. This was absolutely the situation with the booties.</p>
+                
+                <p>Half Dog panicked and commenced attempting to tear the booties off with her teeth.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-vb7OjENk4M7pGHN7kAsy1ZtL57Xl5jUhUIJeFFrD2w4G_50_-3Krfmsig-riie7_i8ze0A3DzPupuAUmYLM2UpFLVoAtudBO7Qjs0x3GbIvrTxHRSGPY_b0RniiKbzo-6m3YuIOHcHM/s400/dogs34.png" alt="Half Dog with booties">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzLvFkPN4B7bKX6CVOq6FeqYKSldBYKyMOJTR6mIzn0LKd2fMMH3UNS7k0J1xcTDkO8bQyXYJA8nHFEPUV2lutnG6sky1L4E2pHHBDeTJX6kpAyJtln9_Tgm4Sk1rIK_iWhoru6Ao6JPo/s400/dogs34next.png" alt="Half Dog trying to remove booties">
+                </div>
+                
+                <p>I reprimanded her and she responded as if I'd destroyed her entire existence.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtjabF-tLcHKszfsbm4L89Ai8ADS7grHgBSiApmYeEWDDnsq5_GW9rlPGaEUy6AyQ2EGUFb7YkXR0BEqGdgJSHJGF7Ne3EIFK0j_8_wc94zDyy-nTQ8T-IwAdfERDESnCzasG5flXG01s/s400/dogs14alt.png" alt="Half Dog devastated">
+                </div>
+                
+                <p>But at least her paralyzing self-pity prevented her from chewing the booties off.</p>
+                
+                <p>Derp Dog simply stood there and gazed at me in a manner that would indicate she didn't comprehend that her legs still functioned.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6pykp9mlTHagNPyzTaOHk0lylcAdXWq6k9FjccqT1cYwIPkAf7erkac-2QrEGdM1z2kuq6t6rS5EkRMOT29is8zwEEjc0d6JSFtGyArq_AB7QAFMldHD-upld3KleIG6qOe3BVe0S_6I/s400/dogs35.png" alt="Derp Dog confused by booties">
+                </div>
+                
+                <p>They had to wear the booties for two days. Those two days were packed with the most intense display of overemotional suffering I have ever observed. Derp Dog spent most of her time standing in the middle of the room looking confused and wounded and Half Dog refused to walk, instead choosing to flop her way around the house like a dying fish.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoA8i0yeFGNJKmV3Sijrk-4TnumFH1FqaWxQfDlOZ37DBAStQ2DeizRjsrhzRXZI_vfoHAGUCp1xtfbmS5VRXCz-CvSpxaJekNhxiVaKKAGwuO7l2xHeILUJR_FHFV0FaONik0b-WeZsc/s400/dogs47.png" alt="Derp Dog confused and wounded">
+                </div>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPgL-h9PNC5apsJRpMlekcT1leeczgaZfdKCKCNr3StYpbunINq-hTayxlEIRDV3bUo_tBpb2ADXlOBEJcZ4X0BO16hvQY63j_MrdiSJs_jsktB3aKeRoY21SNDFVioVQAKG4k4GYp08A/s640/dogs46.png" alt="Half Dog like dying fish">
+                </div>
+                
+                <p>The entire ordeal was punctuated by Derp Dog's high-pitched confusion alarm.</p>
+                
+                <p>We were starting to believe that our dogs were permanently damaged. Nothing we did helped at all to persuade the dogs that we had only changed houses and our new house was not, in fact, some sort of death-camp and we weren't actually planning on killing them to fulfill an organ harvest ritual. Despite our best efforts, they continued to drift around in a sea of confusion and terror, pausing only to look pitiful.</p>
+                
+                <p>But while we were unpacking, we discovered a squeaky toy that was given to us as a gift shortly before we moved. We presented the toy to the dogs. This may have been a mistake.</p>
+                
+                <p>Upon discovering that the toy squeaked when it was compressed forcefully, Derp Dog immediately forgot that she'd ever experienced doubt or anxiety ever in her life. She pounced on the toy with way more force than necessary, over and over and over. The logic behind her sudden change in outlook was unclear.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiErVYZQeGnQqdM5TffdJdQ2ck4Y7Ou8roz2Bv0mr7LWfVbOyvfN8wRHW4FoXjAKCOQ1_colhQnbmh3wzrCoYp_ASfKHxN_mU7z3KhpT1fCTQlupoQXgzrT4-U1BbO4L7gC_Z-CaxxkGqA/s640/dogs44alt.png" alt="Derp Dog with squeaky toy">
+                </div>
+                
+                <p>But at least she was happy again.</p>
+                
+                <div class="image-container">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg589dpJL1ML43p9sDvPV89z_zGnEAJ-PnmTVQomG5LM4b_gUAlv4I8ltEyudn8ZkBZMQUMsQjmsuzar9ve9XuJVaqv75YzQg4ZHGfHG-6UDQpMcECN_GUxPpQ1DcAVUAHzeNxym2yT_o/s640/dogs43altaltalt.png" alt="Derp Dog happy again">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h2>Comments</h2>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <img src="http://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilEn-So6vmMOujNiJnoKnUHMBLaPDc0u2NORMps8pPlOxPZqblGfdVVwl1jMFXui-ZHn0UPEDrMKfBl4q79LLzELNBcsGv20YUWt0QV76DTdS5JLIcC2nFwvGgR_AGJA/s45-c/fairy.jpg" alt="caterpillar" class="comment-avatar">
+                    <div>
+                        <span class="comment-author">caterpillar</span>
+                        <span class="comment-date">August 29, 2025 at 6:15 PM</span>
+                    </div>
+                </div>
+                <div class="comment-text">
+                    とても、とても面白い...ダープ犬が私の犬を思い出させる...
+                </div>
+            </div>
+            
+                                <div class="comment">
+                        <div class="comment-header">
+                            <img src="http://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje6F66LvDXpCTqPABDaD5PUULPC6bGro6Xxx4gnWGIGdt5huLkyLrVe8drMRRs-oiMBYb0sE0j78u5MUrinm9F_Mpxi5efUMntDWNvKeFLWtBAGxY8HWY7WL3lZFrfPg/s45-c/lolz.jpg" alt="CopperKaNikki" class="comment-avatar">
+                            <div>
+                                <span class="comment-author">CopperKaNikki</span>
+                                <span class="comment-date">August 30, 2025 at 6:15 PM</span>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            I love your dogs so much!! They seem so funny and frustrating. XD
+                        </div>
+                    </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <img src="http://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNMFghXoUMdyye_fy852kGT6fqPurWbGXBhq593DcNWjodMSYSGbdPKOpXzsF6yDOklATy_cVg7Q4rFC1L_oWfa0_CzfpmDk5Q6vATTyGEwfi1hYXuBMhLgvgGeNgI3w/s45-c/JaeHo___Wish_you_could_love_me_by_kidchan.jpg" alt="Angie" class="comment-avatar">
+                    <div>
+                        <span class="comment-author">Angie</span>
+                        <span class="comment-date">August 30, 2025 at 6:08 PM</span>
+                    </div>
+                </div>
+                <div class="comment-text">
+                    またしても、涙が出るまで笑いました。あなたは物語を語る才能があり、いつも私の一日を明るくしてくれます。ありがとう、アリー！
+                </div>
+            </div>
+            
+            <!-- Comment Form -->
+            <div class="comment-form">
+                <h3>Add a Comment</h3>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="commentName">Name:</label>
+                        <input type="text" id="commentName" name="commentName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commentImage">Profile Image (optional):</label>
+                        <input type="file" id="commentImage" name="commentImage" accept="image/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="commentText">Comment:</label>
+                        <textarea id="commentText" name="commentText" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <h3>All drawings and words are belong to me</h3>
+            <img src="Untitled design135135135135xzbzb.png" alt="Custom Footer">
+        </div>
+            </div>
+    </div>
+    
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('commentName').value;
+            const commentText = document.getElementById('commentText').value;
+            const imageFile = document.getElementById('commentImage').files[0];
+            
+            if (!name || !commentText) {
+                alert('Please fill in both name and comment fields.');
+                return;
+            }
+            
+            // Create new comment element
+            const newComment = document.createElement('div');
+            newComment.className = 'comment';
+            
+            const currentDate = new Date();
+            const dateString = currentDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }) + ' at ' + currentDate.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            let avatarHTML = '';
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    newComment.querySelector('.comment-avatar').src = e.target.result;
+                };
+                reader.readAsDataURL(imageFile);
+                avatarHTML = `<img src="" alt="${name}" class="comment-avatar">`;
+            } else {
+                avatarHTML = `<div class="default-avatar">👤</div>`;
+            }
+            
+            newComment.innerHTML = `
+                <div class="comment-header">
+                    ${avatarHTML}
+                    <div>
+                        <span class="comment-author">${name}</span>
+                        <span class="comment-date">${dateString}</span>
+                    </div>
+                </div>
+                <div class="comment-text">
+                    ${commentText}
+                </div>
+            `;
+            
+            // Insert new comment before the comment form
+            const commentForm = document.querySelector('.comment-form');
+            commentForm.parentNode.insertBefore(newComment, commentForm);
+            
+            // Reset form
+            document.getElementById('commentForm').reset();
+            
+            // Show success message
+            alert('Comment added successfully!');
+        });
+    </script>
+</body>
+</html>
